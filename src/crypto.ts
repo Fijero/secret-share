@@ -11,7 +11,6 @@ export function encrypt(content: string, key: string) {
   const keyBuffer = Buffer.from(key, "hex");
 
   const iv = crypto.randomBytes(12);
-  console.log(`this is IV ${iv.toString()}`)
   const cipher = crypto.createCipheriv(ALGO, keyBuffer, iv);
 
   const encrypted = Buffer.concat([

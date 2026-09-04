@@ -15,7 +15,6 @@ function generateKey() {
 function encrypt(content, key) {
     const keyBuffer = Buffer.from(key, "hex");
     const iv = crypto_1.default.randomBytes(12);
-    console.log(`this is IV ${iv.toString()}`);
     const cipher = crypto_1.default.createCipheriv(ALGO, keyBuffer, iv);
     const encrypted = Buffer.concat([
         cipher.update(content, "utf8"),
