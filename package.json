@@ -1,0 +1,39 @@
+{
+  "name": "secret-share",
+  "version": "1.0.0",
+  "description": "share env secrets securely",
+  "keywords": [
+    "secret",
+    "share"
+  ],
+  "homepage": "https://github.com/Fijero/secret-share#readme",
+  "bugs": {
+    "url": "https://github.com/Fijero/secret-share/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fijero/secret-share.git"
+  },
+  "license": "ISC",
+  "author": "fijero",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.4.1",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.13",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "chalk": "^6.0.0",
+    "commander": "^15.0.0",
+    "ora": "^9.4.1"
+  }
+}
