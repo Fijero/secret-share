@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const crypto_1 = require("./crypto");
+const key = (0, crypto_1.generateKey)();
+const original = "API_KEY=abc123\nDB_URL=postgres://localhost/mydb";
+const encryptedStr = (0, crypto_1.encrypt)(original, key);
+const decrypted = (0, crypto_1.decrypt)(encryptedStr, key);
+console.log("Key:", key);
+console.log("Encrypted:", encryptedStr);
+console.log("Decrypted:", decrypted);
+console.log("Match:", original === decrypted);
