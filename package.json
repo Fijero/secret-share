@@ -1,10 +1,14 @@
 {
-  "name": "secret-share",
+  "name": "secret-share-cli",
   "version": "1.0.0",
   "description": "share env secrets securely",
   "keywords": [
     "secret",
-    "share"
+    "share",
+    "cli",
+    "security",
+    "developer-tools",
+    "encryption"
   ],
   "homepage": "https://github.com/Fijero/secret-share#readme",
   "bugs": {
@@ -15,10 +19,13 @@
     "url": "git+https://github.com/Fijero/secret-share.git"
   },
   "license": "ISC",
-  "author": "fijero",
+  "author": "Emmanuel Uzoma | fijero",
   "type": "commonjs",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "bin": {
+    "secretshare": "dist/index.js"
+  },
   "scripts": {
     "dev": "tsc --watch",
     "build": "tsc",
@@ -36,5 +43,8 @@
     "chalk": "^6.0.0",
     "commander": "^15.0.0",
     "ora": "^9.4.1"
+  },
+  "engines": {
+    "node": ">=20"
   }
 }

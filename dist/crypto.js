@@ -22,7 +22,7 @@ function encrypt(content, key) {
     ]);
     const authTag = cipher.getAuthTag();
     //   combine iv, authtag, encrypte to single base 64 string
-    return Buffer.concat([iv, authTag, encrypted]);
+    return Buffer.concat([iv, authTag, encrypted]).toString("base64");
 }
 function decrypt(encoded, key) {
     const keyBuffer = Buffer.from(key, "hex");

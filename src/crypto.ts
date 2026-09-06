@@ -21,8 +21,13 @@ export function encrypt(content: string, key: string) {
   const authTag = cipher.getAuthTag();
 
   //   combine iv, authtag, encrypte to single base 64 string
-  return Buffer.concat([iv, authTag, encrypted]);
+  return Buffer.concat([iv, authTag, encrypted]).toString("base64");
 }
+
+
+
+
+
 
 export function decrypt(encoded: string, key: string): string {
   const keyBuffer = Buffer.from(key, "hex");
